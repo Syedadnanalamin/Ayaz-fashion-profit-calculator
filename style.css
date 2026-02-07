@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    /* 🔑 mobile spacing */
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 380px;
+    /* 🔑 mobile control */
+    padding: 22px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.logo img {
+    width: 70px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+}
+
+.title h2 {
+    color: #1d2671;
+    font-size: 22px;
+}
+
+.title p {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+/* 🔥 Mobile-first input layout */
+.input-field {
+    display: flex;
+    flex-direction: column;
+    /* 🔑 stacked on mobile */
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.input-field input,
+.input-field select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    /* 🔑 mobile friendly */
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+#result {
+    margin-top: 18px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* 🖥️ Desktop optimization */
+@media (min-width: 600px) {
+    .input-field {
+        flex-direction: row;
+        /* side-by-side on desktop */
+    }
+}
